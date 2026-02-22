@@ -16,4 +16,4 @@
 - name: restart python
   ansible.builtin.service:
     name: python
-    state: restart
+    state: restarted
