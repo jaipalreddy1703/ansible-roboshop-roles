@@ -10,3 +10,7 @@ include_role does not respect the tags.
 
 import_roles parse the playbook before execution, it is static.
 include_roles is dynamic. it will directly execute the playboo. it will not parse like import_roles before execution.
+
+conditions applied to import_role is applied to all the tasks
+include_role will not care the condition applied to it.
+
