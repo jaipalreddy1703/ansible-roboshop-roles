@@ -3,7 +3,6 @@ regions:
 - us-east-1
 hostname:
 - private-ip-address
-
 filters:
   instance-state-name: running
   tage:Name: frontend
