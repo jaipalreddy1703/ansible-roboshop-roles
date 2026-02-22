@@ -1,5 +1,7 @@
 - name: configure {{component}} server
   hosts: "{{ component }}"
   become: yes
+  vars:
+    MYSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm', '/roboshop/dev/mysql_root_password', region='us-east-1') }}"
   roles:
   - "{{ component }}"
