@@ -6,7 +6,7 @@
 - name: python setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: python-setup.yaml
+    tasks_from: python-setting.yaml
 
 - name: systemd setup
   ansible.builtin.import_role:
