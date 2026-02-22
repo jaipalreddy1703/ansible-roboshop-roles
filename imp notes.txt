@@ -22,3 +22,21 @@ You cannot use loops on 'import_role' statements. You should use 'include_role' 
 Dynamic inventory:
 ====================
 scaling environments - server will be created or destroyed based on traffic.
+we can not use static inventory file, we need to dynamically query the instances. we can use dynamic inventory plugin 
+from AWS passing region, name of the instances, running state ect.
+
+
+Vault:
+=======
+ansible-valult create vault.yaml
+
+we will put the sesitive variables here and save it
+it will ask set the password first time. it wil be in encrypted file something like below.
+
+$ANSIBLE_VAULT;1.1;AES256
+66653033623638616235393362613666326231643762616139336436626232316533653030376633
+6336376566393236306133353239333337643963346431620a356435643033376566396231646139
+36376162313835323766663431653664393366306137323764333234303833383939303932623865
+6239653463623961350a623666396235623963663463396331643766326231333034326330316563
+66336236656233373438653032363836663562313666323838336239656366626336383931663534
+6461363931356666626466343361633632376233343333363231
