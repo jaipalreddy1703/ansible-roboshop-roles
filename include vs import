@@ -7,3 +7,6 @@ import_role respects the tags. if you apply the tages to import_role those will 
 applied to all the tasks inside that role.
 
 include_role does not respect the tags.
+
+import_roles parse the playbook before execution, it is static.
+include_roles is dynamic. it will directly execute the playboo. it will not parse like import_roles before execution.
