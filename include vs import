@@ -1,0 +1,9 @@
+include_role vs import_role
+========================
+
+way of calling other roles.
+
+import_role respects the tags. if you apply the tages to import_role those will be automatically 
+applied to all the tasks inside that role.
+
+include_role does not respect the tags.
