@@ -13,5 +13,12 @@ include_roles is dynamic. it will directly execute the playboo. it will not pars
 
 conditions applied to import_role is applied to all the tasks
 include_role will not care the condition applied to it.
+# import_roles will skip below tasks where include_roles will print all messages without caring the condtions
+
 
 You cannot use loops on 'import_role' statements. You should use 'include_role' instead.
+
+
+Dynamic inventory:
+====================
+scaling environments - server will be created or destroyed based on traffic.

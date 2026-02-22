@@ -6,7 +6,7 @@
   ansible.builtin.set_fact:
     os: "debian" # changing the os variable here from RedHat to debian
 
-# import_roles will skip below tasks
+# import_roles will skip below tasks where include_roles will print all messages without caring the condtions
 
 - name: message 2
   ansible.builtin.debug:
