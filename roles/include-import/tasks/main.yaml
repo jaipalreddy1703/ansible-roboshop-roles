@@ -4,6 +4,6 @@
     name: common
     tasks_from: include-vs-import.yaml
   when: os == "RedHat"
-  loop:
-  - ramesh
-  - suresh
+  # loop:           # import will fail when it sees loops, You should use 'include_role' instead.
+  # - ramesh
+  # - suresh
