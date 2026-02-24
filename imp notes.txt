@@ -43,3 +43,24 @@ $ANSIBLE_VAULT;1.1;AES256
 
 we should run like this : ansible-playbook -e component=mysql roboshop.yaml --ask-vault-pass
 or ask_vault_pass= True should be in ansible.cfg
+
+
+parellel execution:
+===================
+if forks = 8 --> ansible.cfg
+each task is targeted on 8 servers 
+single playbook execution
+
+serial=5 --> play level check roboshop.yaml
+out of 8 forks -> it takes 5 servers --> run entire playbook 
+next 3 servers --> run playbook 
+
+throttel: 
+eg: 
+
+- name: copy nginx.conf 
+    throttel: 2             # 2 servers will servers and then go for another 2.. so on  
+ansible.builtin.template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf 
+notify: restart nginx 
